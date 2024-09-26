@@ -33,8 +33,8 @@ function App() {
           {count < 5 ? (
             <p className="text-green-500">need positive count for box</p>
           ) : (
-            Array.from({ length: Math.floor(count / 5) }).map(() => (
-              <span>
+            Array.from({ length: Math.floor(count / 5) }).map((_,idx) => (
+              <span key={idx+1}>
                 <FaBoxOpen />
               </span>
             ))
